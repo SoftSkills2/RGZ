@@ -20,15 +20,50 @@ void ArrCompare(vector<string>& arr) {
             }
 }
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
 int main()
 {
-    vector <string> vec = { "str", "str","str"};
-
+    vector <string> vec = {"string","string1","string2"};
+    vector <int> sizere = {0,0,0};
+    vector <int> scsave = {0,0,0};
+int n,sc;
+    for(int i=0;i<vec.size();i++)
+    {
+    cout<<"Enetr n - "<<endl;
+    cin>>n;
+    sizere[i]=n;
+    sc=vec[i].size();
+    scsave[i]=sc;
+    vec[i].resize(n);
+    cout<<vec[i];
+    cout<<endl;
+    }
     ArrCompare(vec);
-
-    for (int i = 0; i < vec.size(); ++i)
-        cout << vec[i] << ' ';
-
+    for(int i=0;i<vec.size();i++)
+    {
+        int in=0;
+        int j=scsave[i]-sizere[i];
+    if(j>=3){
+        vec[i]+="...";
+        in=1;
+    }
+    if(j>=2&&in==0){
+        vec[i]+="..";
+        in=1;
+    }
+    if(j>=1&&in==0){
+        vec[i]+='.';
+        in=1;
+    }
+    cout<<vec[i];
+     cout<<endl;
+    }
     return 0;
 }
+
+
+
 
