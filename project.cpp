@@ -20,10 +20,6 @@ void ArrCompare(vector<string>& arr) {
             }
 }
 
-#include <iostream>
-#include <vector>
-using namespace std;
-
 int main()
 {
     vector <string> vec = {"string","string1","string2"};
